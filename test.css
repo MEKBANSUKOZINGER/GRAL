@@ -154,8 +154,8 @@ body {
     position: absolute;
     width: 40px;
     height: 40px;
-    margin-top: -100%;
-    margin-left: 4%;
+    margin-top: -35%;
+    margin-left: 30%;
     opacity: 0;
     
     animation: bottommove 1s;
@@ -167,8 +167,8 @@ body {
     position: absolute;
     width: 36px;
     height: 40px;
-    margin-top: -100%;
-    margin-left: 19%;
+    margin-top: -35%;
+    margin-left: 55%;
     opacity: 0;
     animation: bottommove 1s;
     animation-fill-mode: forwards;
