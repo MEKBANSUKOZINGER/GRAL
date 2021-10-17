@@ -17,3 +17,8 @@ body{
     border-width: 1px;
     border-radius: 5px;
 }
+
+.map{
+    width: 485px;
+    height: 875px;
+}
