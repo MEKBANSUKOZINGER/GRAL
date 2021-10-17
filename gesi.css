@@ -61,3 +61,17 @@ body{
     margin-top: 50%;
     font-weight: 100;
 }
+
+.prevBtn{
+    font-family: 'Black Han Sans', sans-serif;
+    position: absolute;
+    z-index: 99;
+    width: 20%;
+    height: 5%;
+    margin-top: 30px;
+    background-color: deeppink;
+    color: white;
+    border: white;
+    border-width: 1px;
+    border-radius: 5px;
+}
