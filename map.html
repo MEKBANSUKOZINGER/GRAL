@@ -1,93 +1,133 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+
 <html>
-<head>
-<meta charset="UTF-8">
-<title> Google Multiple Markers </title>
 
-    <style type="text/css">
-      
-      #bound {
-      	height: 60%;
-      	width: 60%;
-      }
-      
-      
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-       
-      
-      #map {
-        height: 100%;
-      }
+    <head>
 
-      /* Optional: Makes the sample page fill the window. */
-      html,
-      body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-      
-      
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+        <link rel="stylesheet" href="./map.css">
+        <title>쓰레기통 지도</title>
 
-    </style>
-    
-    
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly"
-      defer
-    >
-    </script>
-    
-    
-  <script>
-  
-  function initMap() {
-      const myLatLng = {
-        lat: 37.55902624,
-        lng: 126.9749014
-      };
+        <style>
 
-    var locations = [
-      ['서울역', 37.5546788, 126.9706069],
-      ['서울특별시청', 37.5668260, 126.9786567],
-      ['을지로입구역', 37.5660373, 126.9821930],
-      ['덕수궁', 37.5655638, 126.974894],
-    ];
+            <!--
 
-    var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 14,
-      center: myLatLng,
-    });
+                .supported {
 
-    var infowindow = new google.maps.InfoWindow();
+                    width:300px; 
 
-    var marker, i;
+                    border:1px solid #e3e3e3; 
 
-    for (i = 0; i < locations.length; i++) {  
-      marker = new google.maps.Marker({
-        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-        map: map
-      });
+                    padding : 5px; 
 
-      google.maps.event.addListener(marker, 'click', (function(marker, i) {
-        return function() {
-          infowindow.setContent(locations[i][0]);
-          infowindow.open(map, marker);
-        }
-      })(marker, i));
-    }    
-  }
-    
-    </script>
-  </head>
-  <body>
-    <button class="prevBtn" onclick="history.back()">PREV</button>
-  <div id = "bound">
-    <div id="map"></div>
-  </div>
-  </body>
-</html>
+                    font-family : Arial; 
+
+                    font-size:0.9em; 
+
+                    line-height:160%;
+
+                }
+
+            --> 
+
+        </style> 
+
+        <script type="text/javascript"
+
+            src="https://maps.google.com/maps/api/js?sensor=false"></script>
+
+        <script language="javascript"> 
+
+            // 위치확인 
+
+            function locationTest() {
+
+                navigator.geolocation.getCurrentPosition(handleLocation, handleError); 
+
+            }
+
+            // 위치콜백 
+
+            function handleLocation(position)  {
+
+                var outDiv = document.getElementById("result"); 
+
+ 
+
+                // 위치정보 만들고 
+
+                var latlng = new google.maps.LatLng(position.coords.latitude, 
+
+                        position.coords.longitude);     
+
+ 
+
+                // 지도 옵션 
+
+                var mapOption = {
+
+                    zoom: 13,
+
+                    center: latlng,
+
+                    mapTypeControl: false,
+
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+
+                };
+
+ 
+
+                // 지도만들고 
+
+                var map = new google.maps.Map(
+
+                        document.getElementById("mapCanvas"), mapOption);
+
+             
+
+                // 위치표시 
+
+                new google.maps.Marker({position : latlng, map : map, title : "here!!"});
+
+            } 
+
+            // 에러콜백 
+
+            function handleError(err) {
+
+                var outDiv = document.getElementById("result");
+
+                 
+
+                if(err.code == 1) {
+
+                    outDiv.innerHTML = "사용자가 위치정보 공유를 거부함";
+
+                }
+
+                else {
+
+                    outDiv.innerHTML = "에러발생 : " + err.code;
+
+                }
+
+            } 
+
+        </script> 
+
+    </head>
+
+    <body onload="javascript:locationTest();">
+        <div>
+            <button class="prevBtn" onclick="history.back()">PREV</button>
+        </div>
+        <div id="mapCanvas" style="width:482px; height:902px; border:0px solid #e3e3e3">
+        </div> 
+
+    </body>
+
+<html>
