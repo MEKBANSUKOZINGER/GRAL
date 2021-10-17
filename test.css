@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+body {
+    overflow: hidden;
+    background-color: darkslateblue;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes upperanimation {
+    from{
+        opacity: 0;
+        transform: translateY(0px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(20px);
+    }
+}
+
+@keyframes titlemovement {
+    40% {transform:translateY(-50px)
+    }
+
+    100%{ transform: translateY(-200px);}
+
+    
+}
+
+@keyframes subtitlemovement {
+    0% {opacity: 0;}
+
+    50% { opacity: 1; transform:translateY(30px)
+    }
+
+    100%{ opacity: 1; transform: translateY(-130px);}
+
+    
+}
+
+@keyframes bottommove {
+    from {
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes notimove {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.noti{
+    font-size: 14px;
+    font-family: 'jua', serif;
+    text-align: right;
+    margin-top: 0%;
+    opacity: 0;
+    animation: notimove .5s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+
+}
+
+.title{
+    width: 100%;
+    height: 200px;
+    font-size: 900%;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 230px;
+    font-family: 'Anton', sans-serif;
+    background: linear-gradient(to right,  violet, deeppink, purple);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: none;
+    animation: titlemovement 2s;
+    animation-fill-mode: forwards;
+}
+
+.subTitle{
+    margin-top: -40%;
+    width: 100%;
+    text-align: center;
+    font-size: 200%;
+    font-family: 'Anton', sans-serif;
+    background: linear-gradient(to right, violet,deeppink, purple);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: none;
+    animation: subtitlemovement 2s;
+    animation-fill-mode: forwards;
+}
+
+#map{
+    width: 50px;
+    height: 60px;
+    margin-left: 13%;
+    opacity: 0;
+    animation: upperanimation .9s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+#pen{
+    width: 40px;
+    height: 65px;
+    margin-left: 10%;
+    opacity: 0;
+    animation: upperanimation .7s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+#inf{
+    width: 60px;
+    height: 60px;
+    margin-left: 10%;
+    opacity: 0;
+    animation: upperanimation .5s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+#user{
+    width: 50px;
+    height: 60px;
+    margin-left: 10%;
+    opacity: 0;
+    animation: upperanimation .3s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+#fun{
+    width: 60px;
+    height: 60px;
+    margin-top: 55%;
+    margin-left: 4%;
+    opacity: 0;
+    
+    animation: bottommove 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+}
+
+#login{
+    width: 50px;
+    height: 60px;
+    margin-top: 55%;
+    margin-left: 4%;
+    opacity: 0;
+    animation: bottommove 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+}
