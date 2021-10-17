@@ -96,6 +96,7 @@ body{
     animation-fill-mode: forwards;
 }
 .prevBtn{
+    font-family: 'Black Han Sans', sans-serif;
     position: absolute;
     z-index: 99;
     width: 20%;
