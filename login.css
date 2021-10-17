@@ -75,3 +75,16 @@ body{
     font-size: 17px; 
     font-weight: 500;
 }
+
+.prevBtn{
+    position: absolute;
+    z-index: 99;
+    width: 20%;
+    height: 5%;
+    margin-top: 30px;
+    background-color: deeppink;
+    color: white;
+    border: white;
+    border-width: 1px;
+    border-radius: 5px;
+}

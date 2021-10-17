@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+
+@keyframes opacon {
+    from {
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+
+body{
+    background-color: darkslateblue;
+}
+
+.func{
+    font-size: 70px;
+    font-weight: 100;
+    font-family: 'Black Han Sans', sans-serif;
+    text-align: center;
+    width: 100%;
+    background: linear-gradient(to right, deepskyblue,deeppink,deepskyblue);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    animation: opacon .5s;
+    animation-fill-mode: forwards;
+} 
+
+.sendEmail{
+    font-size: 40px;
+    font-weight: 100;
+    font-family: 'Black Han Sans', sans-serif;
+    width: 100%;
+    background: linear-gradient(to right, deepskyblue,deeppink,deepskyblue);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    animation: opacon .5s;
+    animation-fill-mode: forwards;
+    animation-delay: .5s;
+}
+
+.prevBtn{
+    position: absolute;
+    z-index: 99;
+    width: 20%;
+    height: 5%;
+    margin-top: 30px;
+    background-color: deeppink;
+    color: white;
+    border: white;
+    border-width: 1px;
+    border-radius: 5px;
+}

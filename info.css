@@ -95,3 +95,15 @@ body{
     animation-delay: 1s;
     animation-fill-mode: forwards;
 }
+.prevBtn{
+    position: absolute;
+    z-index: 99;
+    width: 20%;
+    height: 5%;
+    margin-top: -150px;
+    background-color: deeppink;
+    color: white;
+    border: white;
+    border-width: 1px;
+    border-radius: 5px;
+}
