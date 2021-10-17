@@ -93,7 +93,7 @@ body {
 
 .subTitle{
     position: absolute;
-    margin-top: 95%;
+    margin-top: 110%;
     width: 100%;
     height: 10%;
     text-align: center;
@@ -112,7 +112,7 @@ body {
     position: absolute;
     width: 55px;
     height: 70px;
-    margin-top: 100%;
+    margin-top: 110%;
     margin-left: 11%;
     opacity: 0;
     animation: upperanimation .9s;
@@ -125,7 +125,7 @@ body {
     width: 55px;
     height: 95px;
     margin-left: 32%;
-    margin-top: 100%;
+    margin-top: 110%;
     opacity: 0;
     animation: upperanimation .9s;
     animation-delay: 2s;
@@ -138,7 +138,7 @@ body {
     height: 65px;
     margin-left: 52%;
     opacity: 0;
-    margin-top: 100%;
+    margin-top: 110%;
     animation: upperanimation .9s;
     animation-delay: 2s;
     animation-fill-mode: forwards;
@@ -147,7 +147,7 @@ body {
 #user{
     position: absolute;
     width: 60px;
-    margin-top: 100%;
+    margin-top: 110%;
     height: 60px;
     margin-left: 72%;
     opacity: 0;
@@ -160,7 +160,7 @@ body {
     position: absolute;
     width: 40px;
     height: 40px;
-    margin-top: 120%;
+    margin-top: 130%;
     margin-left: 30%;
     opacity: 0;
     
@@ -173,7 +173,7 @@ body {
     position: absolute;
     width: 36px;
     height: 40px;
-    margin-top: 120%;
+    margin-top: 130%;
     margin-left: 55%;
     opacity: 0;
     animation: upperanimation 1s;
