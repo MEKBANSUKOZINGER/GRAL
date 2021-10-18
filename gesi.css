@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
 
 @keyframes opacon {
     from {
@@ -60,6 +61,21 @@ body{
     -webkit-text-fill-color: transparent;
     margin-top: 50%;
     font-weight: 100;
+}
+
+.gongji{
+    border-radius: 10px;
+    background-color: red;
+    border-color: ghostwhite;
+    color: ghostwhite;
+    font-family: 'jua', serif;
+    margin-left: -30px;
+}
+
+.para{
+    font-family: 'jua', serif;
+    color: ghostwhite;
+    margin-left: 30px;
 }
 
 .prevBtn{
